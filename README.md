@@ -1,77 +1,84 @@
 # Enterprise Supply Chain Analytics Operating Model
-
-SQL-Based Decision Platform for Inventory, Service, Supplier, and Logistics Performance
+### End-to-End SQL Platform for Decision-Centric Supply Chain Analytics
 
 ---
 
 ## Executive Summary
-This project designs an end-to-end supply chain analytics operating model that transforms fragmented operational data into decision-ready insights.
 
-Rather than focusing on isolated dashboards or SQL queries, the solution demonstrates how analytics can be structured as a scalable enterprise capability supporting:
-- Inventory optimization and working capital control
-- Customer service performance (OTIF)
-- Supplier reliability and upstream risk
-- Transport cost vs service trade-offs
-- Executive-level decision-making
+This project demonstrates the design of an **end-to-end supply chain analytics platform**, covering the full lifecycle from **raw operational data → business logic → KPIs → executive decisions**.
 
----
+The objective is not to build isolated dashboards or SQL queries, but to design how analytics should operate as a **business capability across the entire supply chain**.
 
-## Strategic Objective
-Design a decision-centric analytics platform that:
-- Aligns data with business decisions
-- Standardizes KPI definitions
-- Enables cross-functional visibility
-- Supports executive governance
+The platform integrates data from:
 
----
+- ERP (orders, inventory, procurement)
+- WMS (warehouse execution)
+- TMS (transport and freight)
+- Planning systems (forecast and targets)
 
-## SQL Architecture
-04_sql/
-- 00_schema → Database & table setup
-- 01_staging → Data cleaning
-- 02_business_layer → Facts & dimensions
-- 03_kpi_layer → KPI calculations
-- 04_decision_marts → Decision datasets
-- 05_quality_checks → Data validation
+And transforms it into:
+
+- standardized data models  
+- consistent KPI definitions  
+- decision-oriented data marts  
+- executive-level insights  
 
 ---
 
-## Core Fact Tables
-- fact_inventory_position → Inventory + risk
-- fact_order_fulfillment → OTIF + service
-- fact_procurement_reliability → Supplier performance
-- fact_transport_execution → Logistics cost & service
-- fact_demand_signal → Forecast vs actual
+## What This Project Proves
+
+This project is intentionally designed to demonstrate **end-to-end ownership of supply chain analytics**, including:
+
+### 1. Business Understanding
+- Inventory management and working capital trade-offs  
+- Customer service performance (OTIF, fill rate)  
+- Supplier reliability and upstream risk  
+- Logistics cost vs service trade-offs  
 
 ---
 
-## Decision Marts
-- mart_inventory_decision
-- mart_replenishment_decision
-- mart_supplier_risk
-- mart_transport_tradeoff
-- mart_executive_control_tower (main executive layer)
+### 2. Data Architecture Design
+- Multi-source data integration (ERP, WMS, TMS, Planning)
+- Layered SQL architecture
+- Reusable fact and dimension modeling
+- Data model aligned with business processes
 
 ---
 
-## Executive Alerts
-- CRITICAL_SERVICE_AND_INVENTORY
-- SUPPLIER_DRIVEN_SERVICE_RISK
-- SERVICE_PROTECTED_BY_HIGH_FREIGHT_COST
-- HIGH_INVENTORY_LOW_SERVICE_PARADOX
-- STABLE_OR_REVIEW
+### 3. Analytics Engineering
+- End-to-end SQL pipeline development
+- Data standardization and transformation
+- KPI calculation layer
+- Decision mart construction
 
 ---
 
-## Why This Project Matters
-This project demonstrates how to design analytics as a business operating model, not just technical reporting.
-
-It reflects director-level thinking:
-- decision ownership
-- cross-functional analytics
-- financial impact orientation
+### 4. Decision-Centric Thinking
+- Mapping analytics to business decisions
+- Designing datasets for specific use cases
+- Translating KPIs into actions
 
 ---
 
-## Next Step
-Build a Power BI Control Tower dashboard on top of mart_executive_control_tower.
+### 5. Governance & Scalability
+- Data quality validation
+- KPI standardization
+- Reusable data models
+- Structured pipeline execution
+
+---
+
+## End-to-End Supply Chain Analytics Flow
+
+```text
+Raw Data (ERP, WMS, TMS, Planning)
+        ↓
+Staging Layer (Cleaning & Standardization)
+        ↓
+Business Layer (Facts & Dimensions)
+        ↓
+KPI Layer (Standardized Metrics)
+        ↓
+Decision Marts (Use-case Specific Views)
+        ↓
+Executive Control Tower (Leadership Decisions)
